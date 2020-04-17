@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     @IBAction func keyPressed(_ sender: UIButton) {
     
-                
+        sender.alpha = 0.5
         playSound(soundName: sender.currentTitle!)
     }
     
@@ -28,6 +28,10 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
-                
     }
+    
+              
+        
+    
 }
+
